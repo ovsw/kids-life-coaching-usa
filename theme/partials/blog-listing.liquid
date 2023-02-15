@@ -1,0 +1,116 @@
+<header id="blog-header-8" class="section_blog8">
+        <div class="padding-global">
+          <div class="container-large-2">
+            <div class="padding-section-large">
+              <div class="lynx-block-center">
+                <div class="lynx-subtitle">{{ texts.-293e432c }}</div>
+                <h2 class="lynx-heading">{{ texts.-725836b8 }}</h2>
+                <p class="lynx-paragraph">{{ texts.43ff15cd }}<strong>{{ texts.57c3d3f5 }}</strong>{{ texts.2e }}</p>
+                <div class="spacer-3rem"></div>
+              </div>
+              <div class="blog8_component">
+                {%- assign collection = collections.post | filter: "f_featured,eq,true", "ALL", page.inputPath | sort: "-f_post-date" | limit: 1 -%}<div class="blog8_featured-list-wrapper w-dyn-list">
+                  {%- unless collection.length == 0 -%}<div role="list" class="blog8_featured-list w-dyn-items">
+                    {%- for item in collection -%}<div role="listitem" class="blog8_featured-item box-shadow w-dyn-item">
+                      <a href="{{ item.url }}" class="blog8_item-link w-inline-block">
+                        <div class="blog8_featured-item-wrapper">
+                          <div class="blog8_featured-image-wrapper"><img loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;90vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;45vw&quot;}]" src="{{ item.data.f_main-image.url }}" alt="{{ item.data.f_image-alt-description }}" class="blog8_featured-image"></div>
+                          <div class="blog8_featured-item-content">
+                            <div class="blog8_item-content-top">
+                              <div class="blog8_meta-wrapper">
+                                {%- assign blogOfPost = item.data.f_category | resolveReference -%}<div class="blog8_category" style="background-color: {{blogOfPost.data.f_color-2}};">
+                                  {%- assign blogOfPost = item.data.f_category | resolveReference -%}<div class="text-size-small text-weight-semibold">{{ blogOfPost.data.title }}</div>
+                                </div>
+                                <div class="text-size-small text-weight-semibold text-inline">{{ item.data.f_read-time }}</div>
+                                <div class="text-size-small text-weight-semibold text-inline">{{ texts.55c12744 }}</div>
+                              </div>
+                              <div class="blog8_title-wrapper featured-article">
+                                <h3 class="is-blog-listing-title">{{ item.data.title }}</h3>
+                              </div>
+                              <p class="lynx-paragraph">{{ item.data.f_post-summary }}</p>
+                            </div>
+                            <div class="blog8_button-wrapper">
+                              <div class="button is-link is-icon">
+                                <div>{{ texts.31997f7f }}</div>
+                                <div class="icon-embed-xxsmall w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>{%- endfor -%}
+                  </div>{%- endunless -%}
+                  {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                    <div>{{ texts.3d503d2b }}</div>
+                  </div>{%- endif -%}
+                </div>
+                <div class="blog8_category-menu no-scrollbar is--hidden-for-now">
+                  <a href="{{ links.23 }}" class="blog8_menu-link current w-inline-block">
+                    <div>{{ texts.4b09c9c6 }}</div>
+                  </a>
+                  {%- assign collection = collections.blog | sort: "-created-on" -%}<div class="w-dyn-list">
+                    {%- unless collection.length == 0 -%}<div role="list" class="category-list-wrapper w-dyn-items">
+                      {%- for item in collection -%}<div role="listitem" class="w-dyn-item">
+                        <a href="{{ item.url }}" class="blog8_menu-link w-inline-block" style="background-color: {{item.data.f_color-2}};">
+                          <div>{{ item.data.title }}</div>
+                        </a>
+                      </div>{%- endfor -%}
+                    </div>{%- endunless -%}
+                    {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                      <div>{{ texts.3d503d2b }}</div>
+                    </div>{%- endif -%}
+                  </div>
+                  <div class="scrollbar-css w-embed">
+                    <style>
+.no-scrollbar {
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+}
+</style>
+                  </div>
+                </div>
+                {%- assign collection = collections.post | filter: "f_featured,ne,true", "ALL", page.inputPath | sort: "-f_post-date" -%}<div class="blog8_list-wrapper w-dyn-list">
+                  {%- unless collection.length == 0 -%}<div role="list" class="blog8_list w-dyn-items">
+                    {%- for item in collection -%}<div role="listitem" class="blog8_item box-shadow w-dyn-item">
+                      <a href="{{ item.url }}" class="blog8_item-link w-inline-block">
+                        <div class="blog8_image-wrapper"><img loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;90vw&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;43vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;28vw&quot;}]" src="{{ item.data.f_thumbnail-image.url }}" alt="{{ item.data.f_image-alt-description }}" class="blog8_image"></div>
+                        <div class="blog8_item-content">
+                          <div class="blog8_item-content-top">
+                            <div class="blog8_meta-wrapper">
+                              {%- assign blogOfPost = item.data.f_category | resolveReference -%}<div class="blog8_category" style="background-color: {{blogOfPost.data.f_color-2}};">
+                                {%- assign blogOfPost = item.data.f_category | resolveReference -%}<div class="text-size-small text-weight-semibold">{{ blogOfPost.data.title }}</div>
+                              </div>
+                              <div class="text-size-small text-weight-semibold text-inline">{{ item.data.f_read-time }}</div>
+                              <div class="text-size-small text-weight-semibold text-inline">{{ texts.55c12744 }}</div>
+                            </div>
+                            <div class="blog8_title-wrapper">
+                              <h3 class="heading-style-h5">{{ item.data.title }}</h3>
+                            </div>
+                            <p class="lynx-paragraph">{{ item.data.f_post-summary }}</p>
+                          </div>
+                          <div class="blog8_button-wrapper">
+                            <div class="button is-link is-icon">
+                              <div>{{ texts.31997f7f }}</div>
+                              <div class="icon-embed-xxsmall w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>{%- endfor -%}
+                  </div>{%- endunless -%}
+                  {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                    <div>{{ texts.3d503d2b }}</div>
+                  </div>{%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
