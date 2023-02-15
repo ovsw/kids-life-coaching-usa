@@ -7381,4 +7381,18 @@ collections:
                 label: Image Alt
                 widget: string
                 required: false
+          - label: Image
+            name: '-3cbca8bd'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+local_backend: true
 publish_mode: editorial_workflow

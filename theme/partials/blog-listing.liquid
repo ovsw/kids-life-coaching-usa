@@ -14,7 +14,7 @@
                     {%- for item in collection -%}<div role="listitem" class="blog8_featured-item box-shadow w-dyn-item">
                       <a href="{{ item.url }}" class="blog8_item-link w-inline-block">
                         <div class="blog8_featured-item-wrapper">
-                          <div class="blog8_featured-image-wrapper"><img loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;90vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;45vw&quot;}]" src="{{ item.data.f_main-image.url }}" alt="{{ item.data.f_image-alt-description }}" class="blog8_featured-image"></div>
+                          <div class="blog8_featured-image-wrapper">{%- image item.data.f_main-image.url, item.data.f_main-image.alt, '[{"max":767,"size":"90vw"},{"max":10000,"size":"45vw"}]', 'loading="lazy" class="blog8_featured-image"' -%}</div>
                           <div class="blog8_featured-item-content">
                             <div class="blog8_item-content-top">
                               <div class="blog8_meta-wrapper">
@@ -78,7 +78,7 @@
                   {%- unless collection.length == 0 -%}<div role="list" class="blog8_list w-dyn-items">
                     {%- for item in collection -%}<div role="listitem" class="blog8_item box-shadow w-dyn-item">
                       <a href="{{ item.url }}" class="blog8_item-link w-inline-block">
-                        <div class="blog8_image-wrapper"><img loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;90vw&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;43vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;28vw&quot;}]" src="{{ item.data.f_thumbnail-image.url }}" alt="{{ item.data.f_image-alt-description }}" class="blog8_image"></div>
+                        <div class="blog8_image-wrapper">{%- image item.data.f_thumbnail-image.url, item.data.f_thumbnail-image.alt, '[{"max":767,"size":"90vw"},{"max":991,"size":"43vw"},{"max":10000,"size":"28vw"}]', 'loading="lazy" class="blog8_image"' -%}</div>
                         <div class="blog8_item-content">
                           <div class="blog8_item-content-top">
                             <div class="blog8_meta-wrapper">
