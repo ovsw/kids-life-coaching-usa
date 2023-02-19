@@ -5,6 +5,8 @@ backend:
     - editor
 media_folder: theme/assets/images
 public_folder: /assets/images
+site_url: https://kids-life-coaching.netlify.app
+logo_url: https://kids-life-coaching.netlify.app/assets/images/color-logo-narrow-lighter.svg
 collections:
   - name: pages
     label: Pages
